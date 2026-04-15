@@ -1,11 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace tutorial5.Models;
+namespace tutorial5.Dtos;
 
-public class Room
+public class UpdateRoomDto
 {
-    public long Id { get; set; }
-
     [Required]
     public string Name { get; set; } = string.Empty;
 
@@ -18,6 +16,5 @@ public class Room
     public int Capacity { get; set; }
 
     public bool HasProjector { get; set; }
-
     public bool IsActive { get; set; }
 }

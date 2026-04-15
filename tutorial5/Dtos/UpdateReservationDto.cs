@@ -1,11 +1,11 @@
 using System.ComponentModel.DataAnnotations;
 using tutorial5.Enums;
 
-namespace tutorial5.Models;
+namespace tutorial5.Dtos;
 
-public class Reservation : IValidatableObject
+public class UpdateReservationDto : IValidatableObject
 {
-    public long Id { get; set; }
+    [Range(1, long.MaxValue)]
     public long RoomId { get; set; }
 
     [Required]
